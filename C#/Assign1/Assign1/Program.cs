@@ -32,7 +32,7 @@ namespace Assign1
 
             Console.WriteLine("Enter num");
             int n=Convert.ToInt32(Console.ReadLine());
-            if (n > 0)
+            if (n >= 0)
             {
                 Console.WriteLine(n+" is positive num");
             }else if(n<0){
@@ -55,6 +55,14 @@ namespace Assign1
             {
                 Console.WriteLine("{0}+{1}={2}",x,y,x + y);
             }
+            else if (z == '-')
+                Console.WriteLine("{0} - {1} = {2}", x, y, x - y);
+            else if ((z == 'x') || (z == '*'))
+                Console.WriteLine("{0} * {1} = {2}", x, y, x * y);
+            else if (z == '/')
+                Console.WriteLine("{0} / {1} = {2}", x, y, x / y);
+            else
+                Console.WriteLine("Wrong Character");
 
             Console.ReadLine();
         }
