@@ -1,0 +1,8 @@
+C:\Assignments\C#\Assign2\Assign2\bin\Debug\Assign2.exe.config
+C:\Assignments\C#\Assign2\Assign2\bin\Debug\Assign2.exe
+C:\Assignments\C#\Assign2\Assign2\bin\Debug\Assign2.pdb
+C:\Assignments\C#\Assign2\Assign2\obj\Debug\Assign2.csproj.AssemblyReference.cache
+C:\Assignments\C#\Assign2\Assign2\obj\Debug\Assign2.csproj.SuggestedBindingRedirects.cache
+C:\Assignments\C#\Assign2\Assign2\obj\Debug\Assign2.csproj.CoreCompileInputs.cache
+C:\Assignments\C#\Assign2\Assign2\obj\Debug\Assign2.exe
+C:\Assignments\C#\Assign2\Assign2\obj\Debug\Assign2.pdb
