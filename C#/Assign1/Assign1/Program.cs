@@ -55,6 +55,14 @@ namespace Assign1
             {
                 Console.WriteLine("{0}+{1}={2}",x,y,x + y);
             }
+            else if (z == '-')
+                Console.WriteLine("{0} - {1} = {2}", x, y, x - y);
+            else if ((z == 'x') || (z == '*'))
+                Console.WriteLine("{0} * {1} = {2}", x, y, x * y);
+            else if (z == '/')
+                Console.WriteLine("{0} / {1} = {2}", x, y, x / y);
+            else
+                Console.WriteLine("Wrong Character");
 
             Console.ReadLine();
         }
