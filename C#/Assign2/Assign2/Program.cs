@@ -24,7 +24,7 @@ namespace Assign2
 
                  Console.Write(ar[i]+" ");
             }
-            Console.WriteLine("the average of elements: " +ar.Average());
+            Console.WriteLine("\nthe average of elements: " +ar.Average());
             Console.WriteLine("the min element: " +ar.Min()+" "+"and "+  "the max element: " + ar.Max());
 
             //marks
@@ -72,7 +72,7 @@ namespace Assign2
             //accept and display String
             Console.WriteLine("\nEnter a String");
             String s1 = Console.ReadLine();
-            Console.WriteLine("the given input: " +s1);
+            Console.WriteLine("the given input: " +s1+ " "+  "\n "  +"the length of string: " +s1.Length);
 
             //String reverse
 
@@ -85,6 +85,21 @@ namespace Assign2
 
             }
             Console.WriteLine("the reversed String: " + revs);
+
+            //===string values equal==
+            Console.WriteLine("\nenter 6th string ");
+            String s6= Console.ReadLine();
+            Console.WriteLine("enter 7th string ");
+            String s7 = Console.ReadLine();
+            if (s6 == s7)
+            {
+                Console.WriteLine("string s6 {0} and string s7 {1} are equal ", s6, s7);
+            }
+            else
+            {
+                Console.WriteLine("string s6 {0} and string s7 {1} are not equal ", s6, s7);
+            }
+
 
             //palindrome
             Console.WriteLine("\nEnter a String");
