@@ -4,121 +4,135 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assign2
+namespace Assign3
 {
+    //==========studentmarks====================
+
+    internal class Student
+    {
+        int rollno;
+        String name;
+        String branch;
+        String sem;
+        String clas;
+
+        static public void displayResult()
+        {
+            int[] marks = new int[5];
+            marks[0] = 10;
+            marks[1] = 20;
+            marks[2] = 30;
+            marks[3] = 50;
+            marks[4] = 40;
+
+            for (int i = 0; i < marks.Length; i++)
+            {
+                Console.WriteLine("the marks of " +i+" subs are: " +marks[i]);
+            }
+
+            double average = marks.Average();
+
+            for (int i = 0; i < marks.Length; i++)
+            {
+                if(marks[i] < 35)
+                {
+                    Console.WriteLine("FAILED");
+                }else if(marks[i] >35 && average < 50)
+                {
+                    Console.WriteLine("FAILED");
+                }else if (average > 50)
+                {
+                    Console.WriteLine("PASSED");
+                }
+                else
+                {
+                    Console.WriteLine("INVALID");
+                }
+            }
+        }
+        public Student(int rollno, String name, String branch, String sem, String clas)
+        {
+            this.rollno = rollno;
+            this.name = name;
+            this.branch = branch;
+            this.sem = sem;
+            this.clas = clas;
+            Console.WriteLine($"\nRollno is: {rollno}, Name is {name},Student class is {clas}, Sem is {sem},Branch is : {branch}");
+        }
+        static public void displayData()
+        {
+            Console.WriteLine("\nthe marks: ");
+        }
+    }
+
+    //======================car details===========================
+
+    internal class Car
+    {
+        int car_no;
+        string car_name;
+        string car_type;
+        readonly double cost=700000;
+        public Car(int car_no,string car_name,string car_type,double cost)
+        {
+            this.car_no = car_no;
+            this.car_name = car_name;
+            this.car_type = car_type;
+            this.cost = cost;
+            Console.WriteLine($"\nthe car_no is {car_no},car_name is {car_name},car_type is {car_type},cost is {cost} ");
+        }
+        public void showDetails()
+        {
+            Console.WriteLine("\nbefore changing");
+            Console.WriteLine($"the car_no is {car_no},car_name is {car_name},car_type is {car_type},cost is {cost} ");
+        }
+        public Car(double car_cost)
+        {
+            Console.WriteLine("\nafter changing");
+                car_cost = cost;
+            Console.WriteLine($"the car_no is {car_no},car_name is {car_name},car_type is {car_type},cost is {cost} ");
+
+        }
+    }
+
+    //============================bank loan ==========================
+    internal class bank
+    {
+        double interestRate;
+        public void loanCalculator(double loanamt)
+        {
+            Console.WriteLine("\nPlease enter rate of interest");
+            interestRate = Convert.ToDouble(Console.ReadLine());
+            double interest = (loanamt * interestRate) / 100;
+            Console.WriteLine("\nRate of interest for " + interestRate + "(in percentage ) %  is : " + interest);
+        }
+
+    }
+
+
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            //find min,max & avg
-            Console.WriteLine("Enter array size");
-            int []ar = new int[Convert.ToInt32(Console.ReadLine())];
-            for(int i = 0; i <ar.Length; i++)
-            {
-                Console.WriteLine("the elements at " + i);
-                ar[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine("the elements are" );
-            for (int i = 0; i < ar.Length; i++)
-            {
+            //===============student=============
+            Student.displayResult();
+            Student student=new Student(22,"lokesh","mech-c","4-2","mechancial");
+            Student.displayData();
 
-                 Console.Write(ar[i]+" ");
-            }
-            Console.WriteLine("\nthe average of elements: " +ar.Average());
-            Console.WriteLine("the min element: " +ar.Min()+" "+"and "+  "the max element: " + ar.Max());
+            //==============car=============
+            Car car = new Car(123, "ferrai", "sports", 5000000);
+            car.showDetails();
+            Car car2 = new Car(20000000);
 
-            //marks
-            Console.WriteLine("\nEnter marks");
-            int[] arr = new int[Convert.ToInt32(Console.ReadLine())];
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.WriteLine("the elements at " + i);
-                arr[i] = Convert.ToInt32(Console.ReadLine());
-            }
+            //=============bank===============
+            bank bank = new bank();
+            Console.WriteLine("\nenter the loan amount: ");
+            bank.loanCalculator(Convert.ToInt32(Console.ReadLine()));
 
-            Console.WriteLine("the elements are");
-            for (int i = 0; i < arr.Length; i++)
-            {
-
-                Console.Write(arr[i]+" ");
-            }
-
-            //asscending 
-            Array.Sort(arr);
-            Console.WriteLine("\narray after sort in ascending order...");
-            foreach (int i in arr)
-            {
-               Console.Write(i + " ");
-            }
-
-            //descending
-            Array.Reverse(arr);
-            Console.WriteLine("\narray after sort in descending order...");
-            foreach (int i in arr)
-            {
-                Console.Write(i + " ");
-            }
-
-
-
-            Console.WriteLine("\nthe sum of elements: " + arr.Sum() + " " + "and " + "the average of element: " + arr.Average());
-            Console.WriteLine("\nthe min element: " + arr.Min() + " " + "and " + "the max element: " + arr.Max());
-
-
-            
-
-            
-
-            //accept and display String
-            Console.WriteLine("\nEnter a String");
-            String s1 = Console.ReadLine();
-            Console.WriteLine("the given input: " +s1+ " "+  "\n "  +"the length of string: " +s1.Length);
-
-            //String reverse
-
-            Console.WriteLine("\nEnter a String");
-            String s2 = Console.ReadLine();
-            String revs = "";
-            for (int i= s2.Length-1;i>=0;i--)
-            {
-                revs+=s2[i].ToString();
-
-            }
-            Console.WriteLine("the reversed String: " + revs);
-
-            //===string values equal==
-            Console.WriteLine("\nenter 6th string ");
-            String s6= Console.ReadLine();
-            Console.WriteLine("enter 7th string ");
-            String s7 = Console.ReadLine();
-            if (s6 == s7)
-            {
-                Console.WriteLine("string s6 {0} and string s7 {1} are equal ", s6, s7);
-            }
-            else
-            {
-                Console.WriteLine("string s6 {0} and string s7 {1} are not equal ", s6, s7);
-            }
-
-
-            //palindrome
-            Console.WriteLine("\nEnter a String");
-            String s=Console.ReadLine();
-            String rev = "";
-            for (int i=s.Length-1; i>=0; i--)
-            {
-                 rev += s[i].ToString();
-            }
-            if (rev==s)
-            {
-                Console.WriteLine("the String is {0} and reversed string is {1} ", s,rev);
-            }
-            else
-            {
-                Console.WriteLine("not a palindrome");
-            }
-            
             Console.ReadLine();
+
+
         }
     }
 }
