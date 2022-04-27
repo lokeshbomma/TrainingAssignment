@@ -1,0 +1,8 @@
+C:\Assignments\C#\Flower\Flower\bin\Debug\Flower.exe.config
+C:\Assignments\C#\Flower\Flower\bin\Debug\Flower.exe
+C:\Assignments\C#\Flower\Flower\bin\Debug\Flower.pdb
+C:\Assignments\C#\Flower\Flower\obj\Debug\Flower.csproj.AssemblyReference.cache
+C:\Assignments\C#\Flower\Flower\obj\Debug\Flower.csproj.SuggestedBindingRedirects.cache
+C:\Assignments\C#\Flower\Flower\obj\Debug\Flower.csproj.CoreCompileInputs.cache
+C:\Assignments\C#\Flower\Flower\obj\Debug\Flower.exe
+C:\Assignments\C#\Flower\Flower\obj\Debug\Flower.pdb
