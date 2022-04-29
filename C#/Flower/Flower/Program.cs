@@ -19,6 +19,14 @@ namespace Flower
                 Console.WriteLine($"name is {name} & color is {color}");
             }
         }
+        class flowervas
+        {
+            flower1[] flow = new flower1[5];
+            for(int i = 0; i<flow.Length; i++)
+			{
+                public flower1 this[int indexPos] { }
+			}
+        }
         static void Main(string[] args)
         {
             flower1 f = new flower1("datura","red");
