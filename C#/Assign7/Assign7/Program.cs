@@ -33,11 +33,11 @@ namespace Assign7
             {
 
                 IStudent obj = new DaySholar();
-                obj.DisplayDetails(1, "vamsikrishna");
+                obj.DisplayDetails(1, "lokesh");
 
 
                 IStudent obj1 = new Resident();
-                obj1.DisplayDetails(2, "Krishna vamsi");
+                obj1.DisplayDetails(2, "rakesh");
                 Console.ReadLine();
 
             }
