@@ -1,0 +1,8 @@
+C:\Assignments\C#\Assign-6\Assign-6\obj\Debug\Assign-6.csproj.AssemblyReference.cache
+C:\Assignments\C#\Assign-6\Assign-6\obj\Debug\Assign-6.csproj.SuggestedBindingRedirects.cache
+C:\Assignments\C#\Assign-6\Assign-6\obj\Debug\Assign-6.csproj.CoreCompileInputs.cache
+C:\Assignments\C#\Assign-6\Assign-6\bin\Debug\Assign-6.exe.config
+C:\Assignments\C#\Assign-6\Assign-6\bin\Debug\Assign-6.exe
+C:\Assignments\C#\Assign-6\Assign-6\bin\Debug\Assign-6.pdb
+C:\Assignments\C#\Assign-6\Assign-6\obj\Debug\Assign-6.exe
+C:\Assignments\C#\Assign-6\Assign-6\obj\Debug\Assign-6.pdb
