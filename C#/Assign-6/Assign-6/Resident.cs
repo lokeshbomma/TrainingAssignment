@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assign_6
 {
+
     class Resident:IStudent
     {
         public void DisplayDetails(int Id, string Name)

@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace Assign_6
 {
-    class InterfaEg
+    struct Books
+    {
+        int book_id;
+        public int Book_id
+        {
+            get { return book_id; }
+            set { book_id = value; }
+        }
+        public Books(int book_id)
+        {
+            this.book_id = book_id;
+        }
+        public void value(int value)
+        {
+            Console.WriteLine("the book id is " + book_id + " \nthe value of book " + value);
+        }
+    }
+        class InterfaEg
     {
         static void Main()
         {
@@ -18,7 +35,16 @@ namespace Assign_6
             IStudent obj1 = new Resident();
             obj1.DisplayDetails(2, "rakesh");
 
+
+
+            Books book1 = new Books(123);
+            book1.value(1000);
+            Console.ReadLine();
+
             Console.ReadLine();
         }
     }
+    
+    
+    
 }
