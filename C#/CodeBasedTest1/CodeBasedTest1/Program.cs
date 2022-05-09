@@ -25,14 +25,21 @@ namespace CodeBasedTest1
 
                 try
                 {
-                    Console.WriteLine($"name is {name} has booked  with DateofTravel {DateofTravel}");
+                    
                     if (no_of_tickets > 5)
                     {
                         Console.WriteLine("cannot book more than 5 tickets");
+                        
+                    }
+                    else if(no_of_tickets==0)
+                    {
+                        Console.WriteLine("enter tickets atleast 1");
+
                     }
                     else
                     {
-                        Console.WriteLine("Ticket Booked Successfully");
+                        Console.WriteLine("tickets booked succesfully");
+                        Console.WriteLine($"the tickets are {no_of_tickets}");
                     }
                     
                 }
@@ -56,6 +63,7 @@ namespace CodeBasedTest1
                 {
                     Console.WriteLine("not a valid imput");
                 }
+
                 Console.ReadLine();
 
             }
