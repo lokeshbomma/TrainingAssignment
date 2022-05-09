@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Assign7.Program</StartupObject>
+    <StartupObject>Assign7.InterfaeEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
