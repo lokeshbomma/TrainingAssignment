@@ -1,0 +1,17 @@
+--3.    Create table EMP8 with the following columns and conditions. (Empid,Name,Salary,Deptno)
+    ---a.    accept only 10,20,30 as deptno
+    ---b.    Every employee salary must be in the range of 5000 to 50000 only
+	
+	create database lokesh;
+	use lokesh;
+	create table EMP8(
+	Empid int not null,
+	Name varchar(55),
+	Salary int,
+	Deptno int);
+	insert into Emp8 values(1,'lokesh',5000,10);
+	insert into Emp8 values(2,'vijay',12000,20);
+	insert into Emp8 values(3,'krishna',50000,30);
+	select * from EMP8;
+
+	select DATEDIFF(dd,'2017/08/25','2017/11/13') AS DateDiff;
