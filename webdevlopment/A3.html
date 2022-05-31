@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style>
+h1 {
+color: yellow;
+font-family: serif;
+font-weight: bold;
+}
+#style1 {
+background-color: green;
+text-align: center;
+}
+.style2 {
+background-color: green;
+color: wheat;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+</style>
+</head>
+<!--03rd Question. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if both of them are in the said range, else false.-->
+<body>
+<div id="style1">
+<h1>Sample form 03</h1>
+Enter 1st no. : <input id="num1" type="text" size="25" /> <br /> <br />
+Enter 2nd no. : <input id="num2" type="text" size="25" /> <br /> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="check()" class="style2"> check </button> <br /> <br />
+<div id="result"></div> <br />
+<div />
+<script type="text/javascript">
+function check() {
+var one = parseInt(document.getElementById("num1").value);
+var two = parseInt(document.getElementById("num2").value);
+if ((one > 50 && one < 99) && (two > 50 && two < 99)) {
+document.getElementById("result").innerHTML = "The result is : " + true;
+}
+else {
+document.getElementById("result").innerHTML = "The result is : " + false;
+}
+}
+</script>
+</body>
+</html>
