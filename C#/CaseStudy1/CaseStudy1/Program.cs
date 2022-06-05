@@ -4,216 +4,228 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaseStudy1
+namespace caseStudy1
 {
-    class Student
+    class Program
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string DateOfBirth { get; set; }
-        public Student(int Id, string Name, string DateOfBirth)
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateOfBirth = DateOfBirth;
-        }
-    }
-    class Info
-    {
-        public void display(Student student)
-        {
-            Console.WriteLine($"The  student id {student.Id}, student name {student.Name}, student dob {student.DateOfBirth}");
-        }
 
-        public void display(Course course)
-        {
-            Console.WriteLine($"the course id {course.SID}, course name {course.SName}, course duration is {course.Duration}, course fee is {course.Fees}");
-        }
-        public void displayEnrolldetails(Enroll enroll)
-        {
-            display(enroll._student);
-            display(enroll._course);
-            Console.WriteLine(enroll._dateTime);
-        }
-    }
-    class AppEngine
-    {
-        public void introduce(Course course)
-        {
-            Console.WriteLine(course.SID + " " + course.SName + " " + course.Duration + " " + course.Fees);
-        }
 
-        public void register(Student student)
-        {
 
-            Console.WriteLine(student.Id + " " + student.Name + " " + student.DateOfBirth);
+        public static void scenario1_Student()
+        {
+            Info i1 = new Info();
+
+
+
+            Student s1 = new Student(101, "Mani", "2000/ 01 / 04");
+            i1.display(s1);
+            Student s2 = new Student(102, "Vinodh", "01 / 02 / 1998");
+            i1.display(s2);
+            Student s3 = new Student(103, "Kumar", "12 / 07 / 1996");
+            i1.display(s3);
+            Student s4 = new Student(104, "Ramu", " 17 / 05 / 1999");
+            i1.display(s4);
+            Student s5 = new Student(105, "Kiran", " 18 / 08 / 1999");
+            i1.display(s5);
         }
 
 
-    }
-    class Course
-    {
-        public int SID { get; set; }
-        public string SName { get; set; }
-        public string Duration { get; set; }
-        public int Fees { get; set; }
 
-        public Course(int SID, string SName, string Duration, int Fees)
+        public static void scenario2_Student()
         {
-            this.SID = SID;
-            this.SName = SName;
-            this.Duration = Duration;
-            this.Fees = Fees;
-        }
-    }
-    class Enroll {
-        private Student student;
-        private Course course;
-        private DateTime enrollmentDate;
+            Info i2 = new Info();
 
-        public Student _student
-        {
-            get { return student; }
-            set { student = value; }
-        }
-        public Course _course
-        {
-            get { return course; }
-            set { course = value; }
-        }
-        public DateTime _dateTime
-        {
-            get { return enrollmentDate; }
-            set { enrollmentDate = value; }
-        }
-        public Enroll(Student student, Course course, DateTime enrollmentDate)
-        {
-            this.student = student;
-            this.course = course;
-            this.enrollmentDate = enrollmentDate;
 
-        }
 
-    }
+            Student[] student = new Student[5];
+            student[0] = new Student(106, "satish", "04/05/2000");
+            student[1] = new Student(107, "Swaraj", "06/05/1999");
+            student[2] = new Student(108, "Ranga", "08/04/2004");
+            student[3] = new Student(109, "Krish", "03/02/2005");
+            student[4] = new Student(110, "Trinadh", "01/09/2006");
 
-    class App
-    {
-        Info info = new Info();
 
-        public void Scenario1()
-        {
-            Console.WriteLine();
-            Console.WriteLine("----------------Scenario  1----------------");
-            Student student = new Student(101, "akhil", "1-2-1998");
-            Student student1 = new Student(102, "nikhil", "1-2-1992");
-            Student student2 = new Student(103, "vinod", "1-23-1994");
-            info.display(student);
-            info.display(student1);
-            info.display(student2);
-        }
 
-        public void Scenario2()
-        {
-            Console.WriteLine();
-            Console.WriteLine("----------------Scenario  2----------------");
-            Student[] std = new Student[3];
-            std[0] = new Student(104, "vijay", "1-2-1993");
-            std[1] = new Student(105, "lokesh", "1-2-1996");
-            std[2] = new Student(106, "sai", "1-23-1995");
-            for (int i = 0; i < std.Length; i++)
+            for (int i = 0; i < student.Length; i++)
             {
-                info.display(std[i]);
-            }
-        }
-        public void Scenario3()
-        {
-            Console.WriteLine();
-            Console.WriteLine("----------------Scenario  3----------------");
-            Console.WriteLine("Enter the number of details to be inserted");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Student[] std = new Student[n];
-            for (int i = 0; i < std.Length; i++)
-            {
-                Console.WriteLine("Enter the Student ID:");
-                int Id = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter the Student Name:");
-                string Name = Console.ReadLine();
-                Console.WriteLine("Enter the Student DateOfBirth:");
-                string DateOfBirth = Console.ReadLine();
-                std[i] = new Student(Id, Name, DateOfBirth);
-                
-            }
-            for (int i = 0; i < std.Length; i++)
-            {
-                info.display(std[i]);
+                i2.display(student[i]);
+                Console.WriteLine();
             }
         }
 
-        public void CourseScenario1()
+
+
+        public static void scenario3_Student()
         {
-            Console.WriteLine();
-            Console.WriteLine("-------------Course-Scenario1-------------");
-            Course course = new Course(1, "JS", "1 Month", 5000);
-            Course course1 = new Course(2, "HTML", "1 Month", 5000);
-            Course course2 = new Course(3, "C Sharp", "1 Month", 7000);
-            info.display(course);
-            info.display(course1);
-            info.display(course2);
-        }
-        public void CourseScenario2()
-        {
-            Console.WriteLine();
-            Console.WriteLine("---------------Course-Scenario2----------------");
-            Info info = new Info();
-            Course[] crs = new Course[3];
-            crs[0] = new Course(4, "C Language", "2 Months", 8000);
-            crs[1] = new Course(5, "R Language", "1 Month", 4000);
-            crs[2] = new Course(6, "Python", "2 Months", 5000);
-            for (int i = 0; i < crs.Length; i++)
+            Student[] stud = new Student[2];
+            for (int i = 0; i < stud.Length; i++)
             {
-                info.display(crs[i]);
+                int id;
+                string name, Dob;
+                Console.WriteLine("Enter Student ID : ");
+                id = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Student Name : ");
+                name = Console.ReadLine();
+                Console.WriteLine("Enter Student Date of Birth : ");
+                Dob = Console.ReadLine();
+                Console.WriteLine();
+                stud[i] = new Student(id, name, Dob);
+            }
+
+
+
+            Console.WriteLine();
+            Console.WriteLine(" Entered Students details :");
+            Info i3 = new Info();
+
+
+
+            for (int i = 0; i < stud.Length; i++)
+            {
+                i3.display(stud[i]);
+                Console.WriteLine();
             }
         }
 
-        public void CourseScenario3()
+
+
+
+        public static void scenario1_Course()
         {
-            Console.WriteLine();
-            Console.WriteLine("--------------Course-Scenario3----------------");
-            Console.WriteLine("Enter the number of details to be inserted");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Course[] crs = new Course[n];
-            for (int i = 0; i < crs.Length; i++)
+            Info i2 = new Info();
+            Course c1 = new Course(1, "Java", 33, 40000);
+            i2.display(c1);
+            Course c2 = new Course(2, "Python", 39, 10000);
+            i2.display(c2);
+            Course c3 = new Course(203, "C", 45, 35000);
+            i2.display(c3);
+            Course c4 = new Course(204, "Salesfoorce", 70, 25000);
+            i2.display(c4);
+        }
+
+
+
+        public static void scenario2_Course()
+        {
+            Info i2 = new Info();
+            Course[] course = new Course[5];
+            course[0] = new Course(205, "BBA", 70, 12000);
+            course[1] = new Course(206, "BE", 70, 12000);
+            course[2] = new Course(207, "BSC", 70, 12000);
+            course[3] = new Course(208, "CME", 70, 12000);
+            course[4] = new Course(209, "IE", 70, 12000);
+
+
+
+            for (int i = 0; i < course.Length; i++)
             {
-                Console.WriteLine("Enter Course ID:");
-                int Id = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter Course Name:");
-                string Name = Console.ReadLine();
-                Console.WriteLine("Enter Course Duration:");
-                string Duration = Console.ReadLine();
-                Console.WriteLine("Enter Course Fee:");
-                int fee = int.Parse(Console.ReadLine());
-                crs[i] = new Course(Id, Name, Duration, fee);
-            }
-            for (int i = 0; i < crs.Length; i++)
-            {
-                info.display(crs[i]);
+                i2.display(course[i]);
+                Console.WriteLine();
             }
         }
+
+
+
+        public static void scenario3_Course()
+        {
+            Course[] course = new Course[2];
+            for (int i = 0; i < course.Length; i++)
+            {
+                int id;
+                string name;
+                float duration, fees;
+
+
+
+                Console.WriteLine("Enter Course ID : ");
+                id = Convert.ToInt32(Console.ReadLine());
+
+
+
+                Console.WriteLine("Enter Course Name : ");
+                name = Console.ReadLine();
+
+
+
+                Console.WriteLine("Enter Course Duration in days : ");
+                duration = float.Parse(Console.ReadLine());
+
+
+
+                Console.WriteLine("Enter Course Fees : ");
+                fees = float.Parse(Console.ReadLine());
+                Console.WriteLine();
+                course[i] = new Course(id, name, duration, fees);
+
+
+
+            }
+            Console.WriteLine();
+            Console.WriteLine("Entered Course Details :");
+
+
+
+            Info i3 = new Info();
+            for (int i = 0; i < course.Length; i++)
+            {
+                i3.display(course[i]);
+                Console.WriteLine();
+            }
+        }
+
 
 
         static void Main(string[] args)
         {
+            //Console.WriteLine("**************STUDENTS DETAILS*************");
+            //Console.WriteLine();
+            //Console.WriteLine("-----------------Scenario 1----------------");
+            //Console.WriteLine();
+            //scenario1_Student();
+            //Console.WriteLine("-----------------Scenario 2----------------");
+            //Console.WriteLine();
+            //scenario2_Student();
+            //Console.WriteLine("-----------------Scenario 3----------------");
+            //Console.WriteLine();
+            //scenario3_Student();
+            //Console.WriteLine("***************COURSE DETAILS*************");
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine("-----------------Scenario 1----------------");
+            //Console.WriteLine();
+            //scenario1_Course();
+            //Console.WriteLine("-----------------Scenario 2----------------");
+            //Console.WriteLine();
+            //scenario2_Course();
+            //Console.WriteLine("-----------------Scenario 3----------------");
+            //Console.WriteLine();
+            //scenario3_Course();
 
-            App a = new App();
-            a.Scenario1();
-            a.Scenario2();
-            a.Scenario3();
 
-            a.CourseScenario1();
-            a.CourseScenario2();
-            a.CourseScenario3();
 
+
+
+            AppEngine ae = new AppEngine();
+
+
+
+            //Enroll e = new Enroll();
+            //ae.introduce();
+            //ae.register();
+
+
+
+            Institute_Details ID = new Institute_Details();
+            ID.showFirstScreen();
+
+
+
+
+            //ae.enroll();
             Console.Read();
         }
+
+
+
     }
 }
