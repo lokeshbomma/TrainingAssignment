@@ -1,0 +1,7 @@
+C:\Assignments\C#\caseStudy1\caseStudy1\bin\Debug\caseStudy1.exe.config
+C:\Assignments\C#\caseStudy1\caseStudy1\bin\Debug\caseStudy1.exe
+C:\Assignments\C#\caseStudy1\caseStudy1\bin\Debug\caseStudy1.pdb
+C:\Assignments\C#\caseStudy1\caseStudy1\obj\Debug\caseStudy1.csproj.AssemblyReference.cache
+C:\Assignments\C#\caseStudy1\caseStudy1\obj\Debug\caseStudy1.csproj.CoreCompileInputs.cache
+C:\Assignments\C#\caseStudy1\caseStudy1\obj\Debug\caseStudy1.exe
+C:\Assignments\C#\caseStudy1\caseStudy1\obj\Debug\caseStudy1.pdb

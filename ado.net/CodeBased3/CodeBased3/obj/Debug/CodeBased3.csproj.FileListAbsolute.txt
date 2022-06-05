@@ -1,0 +1,7 @@
+C:\Assignments\C#\CodeBased3\CodeBased3\bin\Debug\CodeBased3.exe.config
+C:\Assignments\C#\CodeBased3\CodeBased3\bin\Debug\CodeBased3.exe
+C:\Assignments\C#\CodeBased3\CodeBased3\bin\Debug\CodeBased3.pdb
+C:\Assignments\C#\CodeBased3\CodeBased3\obj\Debug\CodeBased3.csproj.AssemblyReference.cache
+C:\Assignments\C#\CodeBased3\CodeBased3\obj\Debug\CodeBased3.csproj.CoreCompileInputs.cache
+C:\Assignments\C#\CodeBased3\CodeBased3\obj\Debug\CodeBased3.exe
+C:\Assignments\C#\CodeBased3\CodeBased3\obj\Debug\CodeBased3.pdb
