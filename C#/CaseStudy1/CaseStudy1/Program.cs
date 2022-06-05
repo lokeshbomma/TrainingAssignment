@@ -17,15 +17,15 @@ namespace caseStudy1
 
 
 
-            Student s1 = new Student(101, "Mani", "2000/ 01 / 04");
+            Student s1 = new Student(101, "lokesh", "22/ 2 / 1999");
             i1.display(s1);
-            Student s2 = new Student(102, "Vinodh", "01 / 02 / 1998");
+            Student s2 = new Student(102, "Vijay", "01 / 02 / 1998");
             i1.display(s2);
-            Student s3 = new Student(103, "Kumar", "12 / 07 / 1996");
+            Student s3 = new Student(103, "mani", "12 / 04 / 1996");
             i1.display(s3);
-            Student s4 = new Student(104, "Ramu", " 17 / 05 / 1999");
+            Student s4 = new Student(104, "Rakesh", " 17 / 04 / 1999");
             i1.display(s4);
-            Student s5 = new Student(105, "Kiran", " 18 / 08 / 1999");
+            Student s5 = new Student(105, "Kiran", " 16 / 06 / 1999");
             i1.display(s5);
         }
 
