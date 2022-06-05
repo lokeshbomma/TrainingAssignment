@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Assign5
 {
-    internal class Program
+    internal class BankException :ApplicationException
     {
+        public BankException(string msg) : base(msg)
+        {
+
+        } 
+
+    }
+    
         class Bank
         {
             int money=1000;
@@ -62,6 +69,8 @@ namespace Assign5
 
             }
         }
+    class UserDefinedException 
+    { 
         static void Main(string[] args)
         {
             Bank bank = new Bank();
