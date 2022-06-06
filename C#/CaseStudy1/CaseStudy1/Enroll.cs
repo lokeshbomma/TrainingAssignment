@@ -4,21 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace caseStudy1
+namespace CaseStudy1
 {
     class Enroll
     {
         private Student student { get; set; }
         private Course course { get; set; }
-        private DateTime enrollmentDate { get; set; }
+        private DateTime enrollDate { get; set; }
         public Enroll()
         {
             this.student = student;
             this.course = course;
-            this.enrollmentDate = enrollmentDate;
+            this.enrollDate = enrollDate;
         }
-
-
 
     }
 }

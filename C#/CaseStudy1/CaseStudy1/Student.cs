@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace caseStudy1
+namespace CaseStudy1
 {
     public class Student
     {
@@ -21,8 +21,6 @@ namespace caseStudy1
             }
         }
 
-
-
         private string Name;
         public string StudName
         {
@@ -38,19 +36,13 @@ namespace caseStudy1
         public string DOB;
 
 
-
-
-        //public string name,Date;
-
-
+        //public string name,Date;         
 
         public Student(int i, string n, string dob)
         {
             id = i;
             Name = n;
             DOB = dob;
-
-
 
         }
     }
@@ -69,8 +61,6 @@ namespace caseStudy1
             }
         }
 
-
-
         private string Name;
         public string CourseName
         {
@@ -84,12 +74,8 @@ namespace caseStudy1
             }
         }
 
-
-
         public float Course_Duration;
         public float fees;
-
-
 
         public Course(int id, string Course_Name, float duration, float CourseFees)
         {
@@ -99,39 +85,25 @@ namespace caseStudy1
             fees = CourseFees;
         }
 
-
-
     }
-
-
 
     class Info
     {
-
-
 
         public void display(Student student)
         {
             //Code here to display the details of given student
 
+            Console.WriteLine($"  Student Name:  {student.StudName} \n  Student ID :  {student.StudId } \n  DateOfBirth: { student.DOB}");
 
-
-            Console.WriteLine($" Student Name: {student.StudName} \n Student ID : {student.StudId } \n DateOfBirth: { student.DOB}");
-
-
-
-            Console.WriteLine();
+            Console.ReadLine();
         }
-
-
 
         public void display(Course course)
         {
-            Console.WriteLine($" Course ID: {course.CourseID} \n Course Name : {course.CourseName } \n Duration: { course.Course_Duration} days \n Fees: {course.fees}");
+            Console.WriteLine($"  Course ID:  {course.CourseID} \n  Course Name :  {course.CourseName } \n  Duration: { course.Course_Duration}  days \n  Fees: {course.fees}");
 
-
-
-            Console.WriteLine();
+            Console.ReadLine();
         }
     }
 }

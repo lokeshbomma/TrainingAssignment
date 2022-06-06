@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace caseStudy1
+namespace CaseStudy1
 {
     abstract class UserInterface
     {
@@ -16,26 +16,20 @@ namespace caseStudy1
         public abstract void introduceNewCourseScreen();
         public abstract void showAllCoursesScreen();
 
-
-
     }
     class Institute_Details : UserInterface
     {
-
-
 
         private string ans;
         public override void showFirstScreen()
         {
             do
             {
-                Console.WriteLine("Welcome to SMS(Student Management System)");
+                Console.WriteLine("Welcome to Student Management System(SMS)");
                 Console.WriteLine("Tell us who you are : \n1. Student\n2. Admin");
                 Console.WriteLine();
                 Console.WriteLine("Enter your choice ( 1 or 2 ) : ");
                 int op = Convert.ToInt32(Console.ReadLine());
-
-
 
                 switch (op)
                 {
@@ -46,8 +40,6 @@ namespace caseStudy1
                         showAdminScreen();
                         break;
 
-
-
                     default:
                         Console.WriteLine("Please Enter valid Option :");
                         break;
@@ -56,8 +48,6 @@ namespace caseStudy1
                 ans = Console.ReadLine();
             } while ((ans == "yes") || (ans == "Yes") || (ans == "y") || (ans == "Y"));
         }
-
-
 
         public override void showStudentScreen()
         {
@@ -70,26 +60,18 @@ namespace caseStudy1
                 {
                     case 1:
 
-
-
                         ae.Student_Screen();
                         Console.WriteLine();
                         Console.WriteLine("Action Completed Successfully...!");
                         break;
 
-
-
                     case 2:
-
-
 
                         ae.UpdateStudentData();
                         Console.WriteLine();
                         Console.WriteLine("Action Completed Successfully....!");
                         break;
                     case 3:
-
-
 
                         Console.WriteLine("************************List of Available Courses*****************************");
                         Console.WriteLine();
@@ -99,8 +81,6 @@ namespace caseStudy1
                         break;
                     case 4:
 
-
-
                         ae.enrolling_courses();
                         Console.WriteLine();
                         Console.WriteLine("Action Completed Successfully....!");
@@ -109,14 +89,10 @@ namespace caseStudy1
                         Console.WriteLine("Please Enter valid Option....!");
                         break;
 
-
-
                 }
                 Console.WriteLine("Do you want to continue in Student Screen : Yes or No ");
                 ans = Console.ReadLine();
             } while ((ans == "yes") || (ans == "Yes") || (ans == "y") || (ans == "Y"));
-
-
 
         }
         public override void showAdminScreen()
@@ -128,8 +104,6 @@ namespace caseStudy1
                 int op = Convert.ToInt32(Console.ReadLine());
                 switch (op)
                 {
-
-
 
                     case 1://New student registration
                         this.showStudentRegistrationScreen();
@@ -144,7 +118,7 @@ namespace caseStudy1
                         break;
                     case 3:
                         //list of Available courses
-                        Console.WriteLine("***********************All Available Courses in Institute**********************");
+                        Console.WriteLine("*********************All Available Courses in Institute**********************");
                         this.showAllCoursesScreen();
                         Console.WriteLine();
                         Console.WriteLine("Action Completed Successfully....!");
@@ -153,7 +127,7 @@ namespace caseStudy1
                         //update Course details
                         aE.UpdateCourseData();
                         Console.WriteLine();
-                        Console.WriteLine("Action Completed Successfullyt....!");
+                        Console.WriteLine("Action Completed Successfully....!");
                         break;
                     case 5:
                         //getting particular course details
@@ -185,15 +159,11 @@ namespace caseStudy1
                         Console.WriteLine("Action Completed Successfully....!");
                         break;
 
-
-
                     case 10:
                         aE.Show_all_registered_Students();
                         Console.WriteLine();
                         Console.WriteLine("Action Completed Successfully....!");
                         break;
-
-
 
                     default:
                         Console.WriteLine("Please Enter valid Option....!");
@@ -204,8 +174,6 @@ namespace caseStudy1
             } while ((ans == "yes") || (ans == "Yes") || (ans == "y") || (ans == "Y"));
         }
 
-
-
         public override void showAllStudentsScreen()
         {
             AppEngine Ae = new AppEngine();
@@ -215,8 +183,6 @@ namespace caseStudy1
         {
             AppEngine A = new AppEngine();
             A.New_StudentRegistration();
-
-
 
         }
         public override void introduceNewCourseScreen()
@@ -229,8 +195,5 @@ namespace caseStudy1
             AppEngine ape = new AppEngine();
             ape.Available_Courses();
         }
-
-
-
     }
 }
