@@ -6,33 +6,25 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace caseStudy1
+namespace CaseStudy1
 {
     class AppEngine
     {
-
-
 
         public static SqlCommand cmd;
         public static SqlConnection con;
         public static SqlDataReader dr;
 
-
-
-        public static SqlConnection getConnection()
+        static SqlConnection getConnection()
         {
 
-
-
-            con = new SqlConnection(@"data source = ADMW46ZLPC1574\SQLEXPRESS; Initial Catalog=StudentManagementSystem; Integrated Security=True");
+            con = new SqlConnection(@"Data Source=ADMW46ZLPC1574\SQLEXPRESS;Initial Catalog=StudentManagementSystem;Integrated Security=True;");
             con.Open();
             return con;
         }
 
         public void Show_all_registered_Students()
         {
-
-
 
             con = getConnection();
             cmd = new SqlCommand("Select *from Student", con);
@@ -46,12 +38,8 @@ namespace caseStudy1
                 Console.WriteLine("Student Name :" + " " + dr[1]);
                 Console.WriteLine("Student DOB :" + " " + dr[2]);
 
-
-
             }
         }
-
-
 
         public void New_StudentRegistration()
         {
@@ -81,16 +69,10 @@ namespace caseStudy1
                     Console.WriteLine("Please enter valid Student details");
             }
 
-
-
         }
-
-
 
         public void Introducing_NewCourse()
         {
-
-
 
             int no_Of_Courses;
             Console.WriteLine("Enter no. of courses you want to add : ");
@@ -120,12 +102,8 @@ namespace caseStudy1
             }
         }
 
-
-
         public void Available_Courses()
         {
-
-
 
             con = getConnection();
             cmd = new SqlCommand("Select * from Courses", con);
@@ -141,15 +119,9 @@ namespace caseStudy1
                 Console.WriteLine("Course Duration :" + " " + dr[2]);
                 Console.WriteLine("Course Fees :" + " " + dr[3]);
 
-
-
             }
 
-
-
         }
-
-
 
         public void enrolling_courses()
         {
@@ -174,14 +146,10 @@ namespace caseStudy1
                 Console.WriteLine("Please enter valid details");
         }
 
-
-
         public void Student_Screen()
         {
             try
             {
-
-
 
                 con = getConnection();
                 int SId;
@@ -198,8 +166,6 @@ namespace caseStudy1
                     Console.WriteLine("Student Name :" + " " + dr[1]);
                     Console.WriteLine("Student DOB :" + " " + dr[2]);
 
-
-
                 }
             }
             catch (Exception e)
@@ -207,11 +173,7 @@ namespace caseStudy1
                 Console.WriteLine("Students Doesn't Exist...Start New Registration", e.Message);
             }
 
-
-
         }
-
-
 
         public void UpdateStudentData()
         {
@@ -234,8 +196,6 @@ namespace caseStudy1
             else
                 Console.WriteLine("Please enter valid student details...");
         }
-
-
 
         public void DeleteStudentData()
         {
@@ -293,14 +253,10 @@ namespace caseStudy1
         }
 
 
-
-
         public void Check_Particular_Course()
         {
             try
             {
-
-
 
                 con = getConnection();
                 int CId;
@@ -324,8 +280,6 @@ namespace caseStudy1
             {
                 Console.WriteLine("Course Doesn't Exist....!", se);
             }
-
-
 
         }
     }
