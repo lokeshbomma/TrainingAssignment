@@ -135,7 +135,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Movie.cs" />
-    <Compile Include="Models\Moviescontext.cs" />
+    <Compile Include="Models\MoviesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

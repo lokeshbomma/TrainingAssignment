@@ -1,13 +1,16 @@
 ﻿using System;
+
+
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace MVCmovies.Models
 {
-    public class Moviescontext:
+    public class MoviesContext:DbContext
     {
-        public MovieContext() : base("Name=MovieEntites")
+        public MoviesContext() : base("Name=MovieEntites")
         {
 
         }
