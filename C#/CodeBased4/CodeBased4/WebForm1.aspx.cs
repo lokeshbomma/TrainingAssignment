@@ -27,9 +27,6 @@ namespace CodeBased4
         {
             string str = DropDownList1.Text;
             Benz.ImageUrl = "~/Images/" + str + ".jfif";
-
-
-
         }
 
 
