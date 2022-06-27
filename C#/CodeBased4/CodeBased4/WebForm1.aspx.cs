@@ -26,7 +26,7 @@ namespace CodeBased4
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string str = DropDownList1.Text;
-            Benz.ImageUrl = "~/Images/" + str + ".jfif";
+            Benz.ImageUrl = "~/Images/" + str + "Benz.jfif";
         }
 
 
