@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+           $(document).ready(function(){
+             $("button").click(function(){
+                 $.get("http://localhost:57001/api/Students", function(data, status){
+                      console.log(data);
+                });
+             });
+           });
+    </script>
+</head>
+<body>
+    <button>click</button>
+</body>
+</html>
